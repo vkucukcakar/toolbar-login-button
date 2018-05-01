@@ -1,0 +1,1 @@
+WARNING: Do not put your custom language files here to prevent them being deleted on plugin updates. Use "/wp-content/languages/plugins" directory.
