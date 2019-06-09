@@ -2,9 +2,9 @@
 Contributors: vkucukcakar
 Tags: toolbar, admin bar, admin, login
 Requires at least: 4.0
-Tested up to: 4.9
+Tested up to: 5.2
 Requires PHP: 5.3
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,6 +40,12 @@ Features:
 
 
 == Changelog ==
+
+= 1.1.0 =
+* Added plugin action links (settings link)
+* Removed PHP and WordPress version check code as WordPress has this functionality built-in now
+* Moved plugin class to plugin.php
+* Updated WordPress tested version to 5.2
 
 = 1.0.0 =
 * First public version

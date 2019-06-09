@@ -57,6 +57,8 @@ final class tlb_settings {
             add_action( 'admin_init', array( __CLASS__, 'register_plugin_settings' ) );
             // Add admin css
             add_action( 'admin_enqueue_scripts', array( __CLASS__, 'custom_admin_style' ) );
+            // Add plugin action links
+            add_action( 'plugin_action_links_' . toolbar_login_button::get_plugin_basename(), array( __CLASS__, 'add_plugin_action_links' ) );
         }// if
     }// function
 
@@ -95,6 +97,16 @@ final class tlb_settings {
             '<p><a href="' . esc_url( self::REVIEW_URL ) . '">' . __( 'Leave feedback', 'toolbar-login-button' ) . '</a></p>' .
             '<p><a href="' . esc_url( self::SUPPORT_URL ) . '">' . __( 'Support', 'toolbar-login-button' ) . '</a></p>'
          );
+    }// function
+
+    /*
+    * Add plugin action links
+    */
+    static function add_plugin_action_links( $links ) {
+		$mylinks = array(
+			'<a href="' . admin_url( 'options-general.php?page=' . self::OPTIONS_SLUG ) . '">Settings</a>',
+		 );
+		return array_merge( $links, $mylinks );
     }// function
 
     /*
